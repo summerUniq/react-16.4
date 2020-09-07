@@ -30,8 +30,8 @@ const withLog = (Comp: any) => {
 
 }
 
-@withLog
-@withContent
+// @withLog
+// @withContent
 class Lesson extends React.Component<any> {
 
 

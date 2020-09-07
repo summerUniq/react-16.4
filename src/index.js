@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 // import LifeCircle from './LifeCircle'
 // import ContextTest from './ContextTestWithHOC'
 // import HocTest from './HocTestLS'
-import CompositionTest from './CompositionTest'
+// import CompositionTest from './CompositionTest'
+import HooksTest from './HooksTest'
 
 ReactDOM.render(
   // <LifeCircle list="father"/>,
   // <ContextTest/>,
-  < CompositionTest />,
+  < HooksTest />,
   document.getElementById('root')
 );
