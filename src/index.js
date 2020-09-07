@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 // import ContextTest from './ContextTestWithHOC'
 // import HocTest from './HocTestLS'
 // import CompositionTest from './CompositionTest'
-import HooksTest from './HooksTest'
+import HooksTest from './HooksTest-useEffect'
 
 ReactDOM.render(
   // <LifeCircle list="father"/>,
