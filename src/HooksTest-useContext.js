@@ -1,6 +1,10 @@
-import React, { useState, useEffect, useReducer } from 'react'
+import React, { useState, useEffect, useReducer, useContext } from 'react'
 
-function FruitList({ fruits }) {
+// 创建上下文
+const Context = React.createContext();
+
+function FruitList(props) {
+    const {fruits} = useContext(Context)
     return (
         <ul>
             {fruits && fruits.map((fruit => (
@@ -12,13 +16,15 @@ function FruitList({ fruits }) {
 
 // 用户输入处理
 function FruitAdd(props) {
-    // 输入内容及设置内容状态的方法
     const [pname, setPname] = useState('');
+    // 输入内容及设置内容状态的方法
+    const {dispatch} = useContext(Context)
     // 键盘事件处理
     const onAddFruit = e => {
         if (e.key === "Enter") {
-            props.onAddFruit(pname)
-            setPname('')
+           // 直接派发动作修改状态
+           dispatch({type: "add", payload: pname})
+           setPname('')
         }
     }
     return (
@@ -63,8 +69,13 @@ export default function HooksTest() {
 
     return (
         <div>
-            <FruitAdd onAddFruit={pname => dispatch({type: 'add', payload: pname})} />
-            <FruitList fruits={fruits} />
+            <Context.Provider value = {{fruits, dispatch}}>
+            {/* <FruitAdd onAddFruit={pname => dispatch({type: 'add', payload: pname})} /> */}
+            <FruitAdd />
+            <FruitList />
+
+            </Context.Provider>
+           
         </div>
     )
 }

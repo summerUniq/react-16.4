@@ -4,11 +4,14 @@ import ReactDOM from 'react-dom';
 // import ContextTest from './ContextTestWithHOC'
 // import HocTest from './HocTestLS'
 // import CompositionTest from './CompositionTest'
-import HooksTest from './HooksTest-useContext'
+// import HooksTest from './HooksTest-useContext'
+// import UseAntd from './useAntd'
+import NormalLoginForm from './formComp'
 
 ReactDOM.render(
   // <LifeCircle list="father"/>,
   // <ContextTest/>,
-  < HooksTest />,
+  // < HooksTest />,
+  <NormalLoginForm/>,
   document.getElementById('root')
 );
