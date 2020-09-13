@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 // import HooksTest from './HooksTest-useContext'
 // import AntdTest from './AntdTest'
 // import AntdForm from './components/AntdForm'
-import KForm from './components/KForm'
+import KForm from './components/AndFormTest'
 
 ReactDOM.render(
   // <LifeCircle list="father"/>,
